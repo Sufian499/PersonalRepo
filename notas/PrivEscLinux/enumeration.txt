@@ -27,3 +27,48 @@ $ sudo -l
 # ls
 $ ls -al xD
 
+# id -> Idea general del nivel de privilegios del usuario y el grupo en el que pertenece.
+$ id
+
+# /etc/passwd
+$ cat /etc/passwd
+
+# history 
+$ history
+
+# ip a | ifconfig
+# ip route
+
+# netstat -> Consultar conexiones de red existentes.
+$ netstat -a -> Muestra todos los puertos y conexiones establecidas
+$ netstat -at -> Protocolo TCP| netstap -au Protocolo UDP
+$ netstat -l -> Listar puertos que estan en listening mode
+$ netstat -i -> Estadisiticas de las inetrfaces
+$ netstat -ano -> a = muestra todos los sockets, n = No resuelve nombres, o = muestra timers
+
+# find
+$ find . -name flag1.txt
+$ find /home -name flag1.txt
+$ find / -type d -name config -> Busca un directorio llamado config a partir de /
+$ find / -type f -perm 0777 -> Busca archivos desde / que tengan permisos 777
+$ find / -perm a=x -> Encuentra archivos ejecutables
+$ find /home -user <user>
+$ find / -mtime 10 -> Archivos que han sido modificados en los ultimos 10 días.
+$ find / -atime 10 -> Archivos que han sido accedidos en los ultimos 10 días.
+$ find / -cmin -60 -> Archivos que han sido cambiados en los ultimos 60 min.
+$ find / -amin -60 -> Archivos que han sido accedidos en los ultimos 60 min.
+$ find / -size 50M -> Archivos con un size de 50M
+
+Directorios que pueden ser writeable. (Cuando pones -perm puede cambiar la forma de busqueda)
+$ find / -writable -type d 2>/dev/null 
+$ find / -perm -222 -type d 2>/dev/null
+$ find / -perm -o w -type d 2>/dev/null
+
+
+
+
+
+
+
+
+
