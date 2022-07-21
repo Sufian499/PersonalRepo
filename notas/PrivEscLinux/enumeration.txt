@@ -1,0 +1,29 @@
+# Enumeración.
+
+#hostname -> Te devuelve el hostname de la maquina.
+$ hostname
+
+# uname -a -> Información del sistema, como el kernel y su versión.
+$ uname -a
+
+#/proc/version -> Nos da información de los procesos del sistema, nos da tambíen inforamción adicional sobre el kernel.
+$ cat /proc/version
+
+#/etc/issue -> Versión del SO
+$ cat /etc/issue
+
+#ps -> Consultar procesos del sistema
+$ ps 
+$ ps -A -> Ver todos los procesos
+$ ps -axjf -> Ver los procesos en formato tree
+$ ps aux -> Ver los procesos de todos los usuarios
+
+#env -> Consultar variables de sistema, como PATH, SHELL
+$
+
+#sudo -l -> Consultar binarios que podemos usar como sudo
+$ sudo -l
+
+# ls
+$ ls -al xD
+
